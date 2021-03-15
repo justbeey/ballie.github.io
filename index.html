@@ -1,100 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>New webpage</title>
-        <style>
-            #one {
-                position: absolute;
-                top:100px;
-                left:200px;
-                width: 200px;
-            }
-            
-            .two {
-                position:absolute;
-                top:250px;
-                left:350px;
-                width:200px;
-            }
-            #block{
-                background-color:rgb(70, 232, 49);
-                border: 4px solid;
-                position:absolute;
-                height:45px;
-                width:120px;
-                
-                border-radius:10%;
-            }
-        </style>
-    </head>
-    <body>
-    <div id="block"></div>
-    <!--<img id = "one" src= "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/aqualine-seed.png"  alt ="whatever">-->
-    
-    <script >
-      /* var whatEl = document.createElement("img");
-            whatEl.src = "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/aqualine-tree.png";
-            whatEl.alt = "whatever";
-            whatEl.className ="two"
-            document.body.appendChild(whatEl);  
-       */
-       
-       var kostkyEl = document.getElementById("block");
-       var blocks = []
-       for(var i =0; i<100; i++){
-           console.log(i)
-            
-           blocks.push(kostkyEl.style.left = "1.5" * i + "px",kostkyEl.style.top = "1.5" * i + "px");
-           
-       }
-       
-       dim = 2;
-width = 50;
-height = 50;
+	<head>
+		<meta charset="utf-8">
+		<title> JustBeey Photography Home </title>
 
-// add the squares 
-function addSquares()
-{
-  var toAdd = document.createDocumentFragment();
-  for(var i = 0; i < dim; i++)
-  {
-    for(var j = 0; j < dim; j++)
-    {
-      var label = j + i * dim; 
-      var name = "b" + label;
-      console.log(name)
-      var div = document.createElement(name);
-      div.style.width = width + "px";
-      div.style.height = height + "px";
-      div.style.left = width * j + "px";
-      div.style.top = height * i + "px";
-      div.style.position = "absolute";
-      div.style.backgroundColor = "blue";
-      toAdd.appendChild(div);
-    }
-  }
-  document.body.appendChild(toAdd);
-}
+		<style>
+			body {
+				background-image: url(https://user-images.githubusercontent.com/73655389/97698594-06c06780-1aa9-11eb-96ae-b0033b9ea185.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color:white;
+		
+			}
 
-addSquares();
-       
-       
-       
+			#ber {
+				font-size:250%;
+				font-family:serif;
 
-       
-        //jqery
-       /*$("<img>")
-        .attr("src","https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/aqualine-tree.png")
-        .addClass("whatever")
-        .css("top","50"+"px")
-        .css("left","50"+"px")
-        .appendTo("body");
-    */
-        
-        
-    </script>
+				text-align: center;
+				
+				
+				top:50px;
+				left:15px;
+				
+				
 
 
-    </body>
+			}
+
+			#topnav {
+				border:dotted;
+				text-align: center;
+			}
+
+			#topnav a{
+				
+				 text-decoration: none;
+				 font-weight:bold;
+				  padding: 14px 25px;
+
+				  
+				  top:10px;
+				  font-size:200%;
+			}
+
+			a:link {
+ 				 color: black;
+ 				 font-size: 150%;
+			}
+
+			a:visited {
+				color: black;
+				font-size: 150%;
+
+			}
+
+			a:hover {
+  				color: white;
+  				
+  				font-size:40px;
+			}
+
+			a:active {
+  				color: black;
+			}
+
+			.fa {
+  				padding: 20px;
+				 font-size: 50px;
+				 position:absolute;
+				 text-decoration: none;
+
+			}
+
+
+			.fa:hover {
+  				opacity: 0.7;
+			}
+
+			
+
+
+		</style>
+
+
+		
+
+	</head>
+
+	
+
+	
+
+	<body>
+
+		<div class="topnav" id="topnav">
+  		<a href="index.html" class="active">Home</a>
+ 		<a href="about.html">About</a>
+  		<a href="#contact">Portfolio</a>
+  		<a href="#contact">Contact</a>
+		</div>
+
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<a href="https://www.facebook.com/justbeeyvlog/" class="fa fa-facebook"></a><br><br>
+		<a href="https://www.youtube.com/c/JustbeeyVlog" class="fa fa-youtube"></a><br><br>
+		<a href="https://www.instagram.com/justbeeyphotography/" class="fa fa-instagram"></a><br><br>
+		<a href="#" class="fa fa-twitter"></a>
+
+		<div id="ber">
+		 <h1>JustBeey</h1>
+
+		<p> 
+
+		Photographer & Traveler 
+		</p>
+		</div>
+
+	</body>
 </html>
