@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>New webpage</title>
+        <style>
+            #one {
+                position: absolute;
+                top:100px;
+                left:200px;
+                width: 200px;
+            }
+            
+            .two {
+                position:absolute;
+                top:250px;
+                left:350px;
+                width:200px;
+            }
+            #block{
+                background-color:rgb(70, 232, 49);
+                border: 4px solid;
+                position:absolute;
+                height:45px;
+                width:120px;
+                
+                border-radius:10%;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="block"></div>
+    <!--<img id = "one" src= "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/aqualine-seed.png"  alt ="whatever">-->
+    
+    <script >
+      /* var whatEl = document.createElement("img");
+            whatEl.src = "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/aqualine-tree.png";
+            whatEl.alt = "whatever";
+            whatEl.className ="two"
+            document.body.appendChild(whatEl);  
+       */
+       
+       var kostkyEl = document.getElementById("block");
+       var blocks = []
+       for(var i =0; i<100; i++){
+           console.log(i)
+            
+           blocks.push(kostkyEl.style.left = "1.5" * i + "px",kostkyEl.style.top = "1.5" * i + "px");
+           
+       }
+       
+       dim = 2;
+width = 50;
+height = 50;
+
+// add the squares 
+function addSquares()
+{
+  var toAdd = document.createDocumentFragment();
+  for(var i = 0; i < dim; i++)
+  {
+    for(var j = 0; j < dim; j++)
+    {
+      var label = j + i * dim; 
+      var name = "b" + label;
+      console.log(name)
+      var div = document.createElement(name);
+      div.style.width = width + "px";
+      div.style.height = height + "px";
+      div.style.left = width * j + "px";
+      div.style.top = height * i + "px";
+      div.style.position = "absolute";
+      div.style.backgroundColor = "blue";
+      toAdd.appendChild(div);
+    }
+  }
+  document.body.appendChild(toAdd);
+}
+
+addSquares();
+       
+       
+       
+
+       
+        //jqery
+       /*$("<img>")
+        .attr("src","https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/avatars/aqualine-tree.png")
+        .addClass("whatever")
+        .css("top","50"+"px")
+        .css("left","50"+"px")
+        .appendTo("body");
+    */
+        
+        
+    </script>
+
+
+    </body>
+</html>
